@@ -1,0 +1,17 @@
+<p>
+  Lista de computadores: 
+</p>
+<div class="collection">
+  <a class="collection-item" *ngFor="let computador of computadores"
+    [routerLink]="['/computador', computador.id]">
+  {{ computador.nome }}
+  </a>
+</div>
+<p>
+  Página: {{ pagina }}
+</p>
+<div>
+  <button (click)="paginaAnterior()">Anterior</button>
+  <button (click)="proximaPagina()">Próxima</button>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+<p>
+  Lista de Chaves:
+</p>
+<div class="collection">
+  <a class="collection-item" *ngFor="let chave of chaves"
+    [routerLink]="['/chave', chave.id]">
+    {{ chave.nome }}
+  </a>
+</div>
+<button>
+  <a routerLinkActive="active" routerLink="/chaveEmp">Emprestimo de Chaves</a>
+</button>
+
+<p>
+  Página: {{ pagina }}
+</p>
+<div>
+  <button (click)="paginaAnterior()">Anterior</button>
+  <button (click)="proximaPagina()">Próxima</button>
+</div>
+<router-outlet></router-outlet>
+
+
